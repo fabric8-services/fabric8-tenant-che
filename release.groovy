@@ -54,7 +54,7 @@ def updatefabric8Tenant(releaseVersion){
       sh "git push origin versionUpdate${uid}"
 
       def prId = flow.createPullRequest(message,'fabric8-services/fabric8-tenant',"versionUpdate${uid}")
-      flow.mergePR('fabric8-services/fabric8-tenant',prId)
+      flow.mergePR('fabric8-services/fabric8-tenant',prId, "versionUpdate${uid}")
     }
   }
 }
