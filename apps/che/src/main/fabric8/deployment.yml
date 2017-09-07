@@ -180,6 +180,18 @@ spec:
         volumeMounts:
         - mountPath: "/data"
           name: "che-data-volume"
+      - image: "perf/oso-webapi-guard"
+        name: oso-webapi-guard
+        imagePullPolicy: "IfNotPresent"
+        ports:
+        - containerPort: 8001
+          name: "pcp-webguard"
+      - image: "perf/oso-pcp-prometheus"
+        name: oso-pcp-prometheus
+        imagePullPolicy: "IfNotPresent"
+        ports:
+        - containerPort: 44323
+          name: "pcp-webapi"
       serviceAccountName: "che"
       volumes:
       - name: che-data-volume
