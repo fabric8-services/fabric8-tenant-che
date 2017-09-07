@@ -11,8 +11,8 @@ releaseNode {
 
       def version = mavenCI{}
       // hard coded for now
-      def mvnRepo = "http://nexus.cd.k8s.fabric8.io/content/repositories/snapshots"
-      def message = "snapshot YAML now available: `CHE_VERSION=${version}` `YAML_MVN_REPO=${mvnRepo}`"
+      def mvnRepo = "https://nexus.cd.test.fabric8.io/content/repositories/snapshots"
+      def message = "PR now available for testing: https://openshift.io/_profile/_tenant?cheVersion=${version}&mavenRepo=${mvnRepo}"
 
       stage('notify'){
           def pr = env.CHANGE_ID
