@@ -76,7 +76,7 @@
 
   <properties>
     <arquillian.version>1.1.8.Final</arquillian.version>
-    <che-server.version/>
+    <che-server.version>7aaa377-fabric8-a165962</che-server.version>
     <fabric8.version>2.2.205</fabric8.version>
     <fabric8.maven.plugin.version>3.5.28</fabric8.maven.plugin.version>
     <junit.version>4.12</junit.version>
