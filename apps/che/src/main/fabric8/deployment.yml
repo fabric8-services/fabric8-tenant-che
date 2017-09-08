@@ -150,7 +150,7 @@ spec:
             configMapKeyRef:
               key: "che-workspace-auto-snapshot"
               name: "che"
-        image: "rhche/che-server:${che-server.version}"
+        image: "registry.devshift.net/che/che:${che-server.version}"
         imagePullPolicy: "IfNotPresent"
         name: che
         readinessProbe:
