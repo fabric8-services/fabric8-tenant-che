@@ -95,7 +95,7 @@ spec:
             configMapKeyRef:
               key: "workspaces-memory-request"
               name: "che"
-        - name: "CHE_WORKSPACE_AUTO_START"
+        - name: "CHE_WORKSPACE_AUTO__START"
           valueFrom:
             configMapKeyRef:
               key: "enable-workspaces-autostart"
