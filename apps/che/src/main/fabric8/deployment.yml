@@ -158,8 +158,8 @@ spec:
             path: /api/system/state
             port: 8080
             scheme: HTTP
-          initialDelaySeconds: 60
-          timeoutSeconds: 10
+          initialDelaySeconds: 15
+          timeoutSeconds: 60
         livenessProbe:
           httpGet:
             path: /api/system/state
