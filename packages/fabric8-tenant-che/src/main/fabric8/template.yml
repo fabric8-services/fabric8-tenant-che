@@ -11,4 +11,4 @@ parameters:
 - name: KEYCLOAK_OSO_ENDPOINT
   value: https://sso.prod-preview.openshift.io/auth/realms/fabric8/broker/openshift-v3/token
 - name: KEYCLOAK_GITHUB_ENDPOINT
-  value: https://sso.prod-preview.openshift.io/auth/realms/fabric8/broker/github/token
+  value: https://auth.prod-preview.openshift.io/api/token?for=https://github.com
