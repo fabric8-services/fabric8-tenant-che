@@ -83,7 +83,7 @@
     <fabric8.openshift.deployTimeoutSeconds>10000</fabric8.openshift.deployTimeoutSeconds>
        
     <arquillian.version>1.1.8.Final</arquillian.version>
-    <che-server.version>ee46279-fabric8-fac865a</che-server.version>
+    <che-server.version>ee46279-fabric8-bfad140</che-server.version>
     <fabric8.version>2.2.205</fabric8.version>
     <fabric8.maven.plugin.version>3.5.31</fabric8.maven.plugin.version>
     <junit.version>4.12</junit.version>
