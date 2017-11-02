@@ -155,6 +155,7 @@ spec:
             fieldRef:
               fieldPath: "metadata.namespace"
         - name: "OSIO_ACL_SERVER"
+          valueFrom:
             configMapKeyRef:
               key: "osio-acl-server"
               name: "che"
