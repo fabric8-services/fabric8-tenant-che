@@ -150,6 +150,14 @@ spec:
             configMapKeyRef:
               key: "che-workspace-auto-snapshot"
               name: "che"
+        - name: "OSIO_NAMESPACE"
+          valueFrom:
+            fieldRef:
+              fieldPath: "metadata.namespace"
+        - name: "OSIO_ACL_SERVER"
+            configMapKeyRef:
+              key: "osio-acl-server"
+              name: "che"
         image: "registry.devshift.net/che/che:${che-server.version}"
         imagePullPolicy: "IfNotPresent"
         name: che
