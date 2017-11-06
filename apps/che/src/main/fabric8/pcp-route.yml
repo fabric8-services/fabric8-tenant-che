@@ -1,7 +1,6 @@
 metadata:
   name: "pcp"
 spec:
-  path: "/osio_metrics"
   to:
     kind: Service
     name: "pcp"
