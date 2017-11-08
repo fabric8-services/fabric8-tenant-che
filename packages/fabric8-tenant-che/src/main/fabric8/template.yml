@@ -12,3 +12,9 @@ parameters:
   value: https://sso.prod-preview.openshift.io/auth/realms/fabric8/broker/openshift-v3/token
 - name: KEYCLOAK_GITHUB_ENDPOINT
   value: https://auth.prod-preview.openshift.io/api/token?for=https://github.com
+- name: CHE_KEYCLOAK_AUTH__SERVER__URL
+  value: https://sso.prod-preview.openshift.io/auth
+- name: CHE_KEYCLOAK_REALM
+  value: fabric8
+- name: CHE_KEYCLOAK_CLIENT__ID
+  value: openshiftio-public
