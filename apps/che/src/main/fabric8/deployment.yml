@@ -150,21 +150,6 @@ spec:
             configMapKeyRef:
               key: "che-workspace-auto-snapshot"
               name: "che"
-        - name: "CHE_KEYCLOAK_AUTH__SERVER__URL"
-          valueFrom:
-            configMapKeyRef:
-              key: "che-keycloak-auth-server-url"
-              name: "che"
-        - name: "CHE_KEYCLOAK_REALM"
-          valueFrom:
-            configMapKeyRef:
-              key: "che-keycloak-realm"
-              name: "che"
-        - name: "CHE_KEYCLOAK_CLIENT__ID"
-          valueFrom:
-            configMapKeyRef:
-              key: "che-keycloak-client-id"
-              name: "che"
         image: "registry.devshift.net/che/che:${che-server.version}"
         imagePullPolicy: "IfNotPresent"
         name: che

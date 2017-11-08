@@ -27,6 +27,3 @@ data:
   che-server-timeout-ms: "3600000"
   che-openshift-precreate-subpaths: "false"
   che-workspace-auto-snapshot: "false"
-  che-keycloak-auth-server-url: ${CHE_KEYCLOAK_AUTH__SERVER__URL}
-  che-keycloak-realm: ${CHE_KEYCLOAK_REALM}
-  che-keycloak-client-id: ${CHE_KEYCLOAK_CLIENT__ID}
