@@ -1,0 +1,1 @@
+defines the workpsace PVC that should be configured in user namespace for multi-tenant che support
