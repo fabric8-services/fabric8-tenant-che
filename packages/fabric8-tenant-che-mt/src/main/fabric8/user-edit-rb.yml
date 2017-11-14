@@ -1,0 +1,9 @@
+metadata:
+  name: user-edit
+roleRef:
+  name: edit
+subjects:
+- kind: User
+  name: ${PROJECT_USER}
+userNames:
+- ${PROJECT_USER}
