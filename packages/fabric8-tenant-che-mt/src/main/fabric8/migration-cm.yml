@@ -1,0 +1,3 @@
+data:
+  osio-token: ${OSIO_TOKEN}
+  che-multitenant-server: ${CHE_MULTITENANT_SERVER}
