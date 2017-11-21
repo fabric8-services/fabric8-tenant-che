@@ -2,7 +2,9 @@ kind: Template
 parameters:
 - name: PROJECT_USER
   value: developer
-- name: OSIO_TOKEN
 - name: CHE_MULTITENANT_SERVER
   value: "https://che.prod-preview.openshift.io"
+- name: OSIO_TOKEN
+- name: IDENTITY_ID
+- name: REQUEST_ID
 
