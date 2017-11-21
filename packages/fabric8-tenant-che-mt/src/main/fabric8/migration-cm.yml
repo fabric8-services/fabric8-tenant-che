@@ -1,3 +1,5 @@
 data:
   osio-token: ${OSIO_TOKEN}
   che-multitenant-server: ${CHE_MULTITENANT_SERVER}
+  identity-id: ${IDENTITY_ID}
+  request-id: ${REQUEST_ID}
