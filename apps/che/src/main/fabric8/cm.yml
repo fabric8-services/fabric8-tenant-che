@@ -14,14 +14,15 @@ data:
   port: "8080"
   remote-debugging-enabled: "false"
   che-oauth-github-forceactivation: "true"
-  workspaces-memory-limit: "1900Mi"
-  workspaces-memory-request: "1100Mi"
+  workspaces-memory-limit: "1280Mi"
+  workspaces-memory-request: "1000Mi"
   enable-workspaces-autostart: "false"
   keycloak-oso-endpoint: ${KEYCLOAK_OSO_ENDPOINT}
   keycloak-github-endpoint: ${KEYCLOAK_GITHUB_ENDPOINT}
   keycloak-disabled: "false"
   che-server-java-opts: "-XX:MaxRAMFraction=2 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -Xms20m"
-  che-workspaces-java-opts: "-XX:+UseG1GC -XX:+UseStringDeduplication -XX:MinHeapFreeRatio=20 -XX:MaxHeapFreeRatio=40 -XX:MaxRAM=1200m -Xms256m"
+  che-workspaces-java-opts: "-XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -Xms20m"
+  che-workspaces-maven-opts: "-XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -Xms20m -Xmx230m"
   che-openshift-secure-routes: "true"
   che-secure-external-urls: "true"
   che-server-timeout-ms: "3600000"
