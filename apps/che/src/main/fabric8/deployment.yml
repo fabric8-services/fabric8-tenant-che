@@ -165,7 +165,7 @@ spec:
             configMapKeyRef:
               key: "che-keycloak-client-id"
               name: "che"
-        image: "registry.devshift.net/che/che:${che-server.version}"
+        image: "docker.io/jerboaa/che-server:0.0.2"
         imagePullPolicy: "IfNotPresent"
         name: che
         readinessProbe:
