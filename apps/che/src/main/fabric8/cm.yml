@@ -20,7 +20,7 @@ data:
   keycloak-oso-endpoint: ${KEYCLOAK_OSO_ENDPOINT}
   keycloak-github-endpoint: ${KEYCLOAK_GITHUB_ENDPOINT}
   keycloak-disabled: "false"
-  che-server-java-opts: "-XX:MaxRAMFraction=2 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -Xms20m"
+  che-server-java-opts: "-XX:+UseParallelGC -XX:MinHeapFreeRatio=25 -XX:MaxHeapFreeRatio=40 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -Xms50m -Xmx180m"
   che-workspaces-java-opts: "-XX:+UseG1GC -XX:+UseStringDeduplication -XX:MinHeapFreeRatio=20 -XX:MaxHeapFreeRatio=40 -XX:MaxRAM=1200m -Xms256m"
   che-openshift-secure-routes: "true"
   che-secure-external-urls: "true"

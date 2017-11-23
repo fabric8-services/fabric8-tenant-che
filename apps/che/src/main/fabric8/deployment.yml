@@ -189,9 +189,9 @@ spec:
           timeoutSeconds: 10
         resources:
           limits:
-            memory: 512Mi
+            memory: 300Mi
           requests:
-            memory: 256Mi
+            memory: 200Mi
         ports:
         - containerPort: 8080
           name: "http"
