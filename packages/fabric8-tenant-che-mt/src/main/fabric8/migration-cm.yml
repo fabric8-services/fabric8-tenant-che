@@ -3,3 +3,4 @@ data:
   che-multitenant-server: ${CHE_MULTITENANT_SERVER}
   identity-id: ${IDENTITY_ID}
   request-id: ${REQUEST_ID}
+  cleanup-single-tenant: "true"
