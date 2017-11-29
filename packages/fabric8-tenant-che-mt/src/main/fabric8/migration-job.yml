@@ -18,18 +18,18 @@ spec:
       containers:
       - name: migration
         env:
-          - name: JAVA_OPTS
-            valueFrom:
-              configMapKeyRef:
-                key: java-options
-                name: migration-settings
-                optional: true
-          - name: DEBUG
-            valueFrom:
-              configMapKeyRef:
-                key: debug
-                name: migration-settings
-                optional: true
+        - name: JAVA_OPTS
+          valueFrom:
+            configMapKeyRef:
+              key: java-options
+              name: migration-settings
+              optional: true
+        - name: DEBUG
+          valueFrom:
+            configMapKeyRef:
+              key: debug
+              name: migration-settings
+              optional: true
         - name: CLEANUP_SINGLE_TENANT
           valueFrom:
             configMapKeyRef:
