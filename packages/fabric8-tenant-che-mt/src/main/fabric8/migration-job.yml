@@ -1,0 +1,61 @@
+metadata:
+  name: migration-${JOB_ID}
+  annotations:
+    request-id: ${REQUEST_ID}
+  labels:
+    migration:
+spec:
+  parallelism: 1
+  completions: 1
+  template:
+    metadata:
+      name: migration-${JOB_ID}
+      annotations:
+        request-id: ${REQUEST_ID}
+      labels:
+        migration:
+    spec:
+      containers:
+      - name: migration
+        env:
+          - name: JAVA_OPTS
+            valueFrom:
+              configMapKeyRef:
+                key: java-options
+                name: migration-settings
+                optional: true
+          - name: DEBUG
+            valueFrom:
+              configMapKeyRef:
+                key: debug
+                name: migration-settings
+                optional: true
+        - name: CLEANUP_SINGLE_TENANT
+          valueFrom:
+            configMapKeyRef:
+              key: cleanup-single-tenant
+              name: migration
+        - name: CHE_MULTITENANT_SERVER
+          valueFrom:
+            configMapKeyRef:
+              key: che-multitenant-server
+              name: migration
+        - name: OSIO_TOKEN
+          valueFrom:
+            configMapKeyRef:
+              key: osio-token
+              name: migration
+        - name: IDENTITY_ID
+          valueFrom:
+            configMapKeyRef:
+              key: identity-id
+              name: migration
+        - name: REQUEST_ID
+          valueFrom:
+            configMapKeyRef:
+              key: request-id
+              name: migration
+        image: registry.devshift.net/fabric8-services/fabric8-tenant-che-migration/${che-server.version}
+        imagePullPolicy: "Always"
+      restartPolicy: Never
+      serviceAccount: che
