@@ -13,7 +13,7 @@ spec:
       annotations:
         request-id: ${REQUEST_ID}
       labels:
-        migration:
+        migration: "true"
     spec:
       containers:
       - name: migration
@@ -55,7 +55,7 @@ spec:
             configMapKeyRef:
               key: request-id
               name: migration
-        image: registry.devshift.net/fabric8-services/fabric8-tenant-che-migration/${che-server.version}
+        image: registry.devshift.net/fabric8-services/fabric8-tenant-che-migration/${che-migration.version}
         imagePullPolicy: "Always"
       restartPolicy: Never
       serviceAccount: che
