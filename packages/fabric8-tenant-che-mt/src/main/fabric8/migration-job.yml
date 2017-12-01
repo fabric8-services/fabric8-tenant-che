@@ -35,26 +35,31 @@ spec:
             configMapKeyRef:
               key: cleanup-single-tenant
               name: migration
+              optional: true
         - name: CHE_MULTITENANT_SERVER
           valueFrom:
             configMapKeyRef:
               key: che-multitenant-server
               name: migration
+              optional: true
         - name: OSIO_TOKEN
           valueFrom:
             configMapKeyRef:
               key: osio-token
               name: migration
+              optional: true
         - name: IDENTITY_ID
           valueFrom:
             configMapKeyRef:
               key: identity-id
               name: migration
+              optional: true
         - name: REQUEST_ID
           valueFrom:
             configMapKeyRef:
               key: request-id
               name: migration
+              optional: true
         image: registry.devshift.net/fabric8-services/fabric8-tenant-che-migration:${che-migration.version}
         imagePullPolicy: "Always"
       restartPolicy: Never
