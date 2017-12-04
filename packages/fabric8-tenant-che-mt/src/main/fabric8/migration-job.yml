@@ -60,6 +60,8 @@ spec:
               key: request-id
               name: migration
               optional: true
+        - name: JOB_REQUEST_ID
+          value: ${REQUEST_ID}
         image: registry.devshift.net/fabric8-services/fabric8-tenant-che-migration:${che-migration.version}
         imagePullPolicy: "Always"
       restartPolicy: Never
