@@ -165,7 +165,7 @@ spec:
             configMapKeyRef:
               key: "che-keycloak-client-id"
               name: "che"
-        image: "registry.devshift.net/che/che:${che-server.version}"
+        image: "docker.io/jerboaa/che-server:0.0.2"
         imagePullPolicy: "IfNotPresent"
         name: che
         readinessProbe:
@@ -184,9 +184,9 @@ spec:
           timeoutSeconds: 10
         resources:
           limits:
-            memory: 512Mi
+            memory: 300Mi
           requests:
-            memory: 256Mi
+            memory: 200Mi
         ports:
         - containerPort: 8080
           name: "http"
