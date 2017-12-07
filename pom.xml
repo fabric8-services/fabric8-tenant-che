@@ -86,11 +86,7 @@
     <che-server.version>fe2bed6-fabric8-d8655d6</che-server.version>
     <che-migration.version>latest</che-migration.version>
     <fabric8.version>2.2.205</fabric8.version>
-    <!-- Be careful, when upgrading fabric8.maven.plugin.version here,
-     to also update the one in packages/fabric8-tenant-che-mt/pom.xml
-     that is currently overridden due to a limitation of the
-     3.5.32 version -->
-    <fabric8.maven.plugin.version>3.5.32</fabric8.maven.plugin.version>
+    <fabric8.maven.plugin.version>3.5.33</fabric8.maven.plugin.version>
     <junit.version>4.12</junit.version>
     <maven.enforcer.plugin.version>1.4</maven.enforcer.plugin.version>
     <maven.javadoc.plugin.version>2.10.3</maven.javadoc.plugin.version>
