@@ -165,6 +165,11 @@ spec:
             configMapKeyRef:
               key: "che-keycloak-client-id"
               name: "che"
+        - name: "CHE_WORKSPACE_AGENT_DEV_PING__SUCCESS__THRESHOLD"
+          valueFrom:
+            configMapKeyRef:
+              key: "che-wsagent-ping-success-threshold"
+              name: "che"
         image: "registry.devshift.net/che/che:${che-server.version}"
         imagePullPolicy: "IfNotPresent"
         name: che
