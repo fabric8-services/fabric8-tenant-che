@@ -110,6 +110,11 @@ spec:
             configMapKeyRef:
               key: "che-workspaces-java-opts"
               name: "che"
+        - name: "CHE_WORKSPACE_MAVEN_OPTIONS"
+          valueFrom:
+            configMapKeyRef:
+              key: "che-workspaces-maven-opts"
+              name: "che"
         - name: "CHE_OPENSHIFT_SECURE_ROUTES"
           valueFrom:
             configMapKeyRef:
