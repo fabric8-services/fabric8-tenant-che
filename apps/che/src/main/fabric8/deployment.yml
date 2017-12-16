@@ -189,7 +189,7 @@ spec:
           timeoutSeconds: 10
         resources:
           limits:
-            memory: 300Mi
+            memory: 600Mi
           requests:
             memory: 200Mi
         ports:

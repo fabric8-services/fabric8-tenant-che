@@ -20,7 +20,7 @@ data:
   keycloak-oso-endpoint: ${KEYCLOAK_OSO_ENDPOINT}
   keycloak-github-endpoint: ${KEYCLOAK_GITHUB_ENDPOINT}
   keycloak-disabled: "false"
-  che-server-java-opts: "-XX:+UseParallelGC -XX:MinHeapFreeRatio=25 -XX:MaxHeapFreeRatio=40 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -Xms50m -Xmx180m"
+  che-server-java-opts: "-XX:+UseParallelGC -XX:MinHeapFreeRatio=25 -XX:MaxHeapFreeRatio=40 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -Xms50m -Xmx180m -Dfile.encoding=UTF8"
   che-workspaces-java-opts: "-XX:+UseG1GC -XX:+UseStringDeduplication -XX:MinHeapFreeRatio=20 -XX:MaxHeapFreeRatio=40 -XX:MaxRAM=1200m -Xms256m"
   che-openshift-secure-routes: "true"
   che-secure-external-urls: "true"
@@ -30,4 +30,4 @@ data:
   che-keycloak-auth-server-url: ${CHE_KEYCLOAK_AUTH__SERVER__URL}
   che-keycloak-realm: ${CHE_KEYCLOAK_REALM}
   che-keycloak-client-id: ${CHE_KEYCLOAK_CLIENT__ID}
-  che-wsagent-ping-success-threshold: "25"
+  che-wsagent-ping-success-threshold: "2"
