@@ -1,0 +1,7 @@
+metadata:
+  name: che
+roleRef:
+  name: edit
+subjects:
+- kind: ServiceAccount
+  name: che
