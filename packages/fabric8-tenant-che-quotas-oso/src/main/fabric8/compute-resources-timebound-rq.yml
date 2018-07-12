@@ -4,7 +4,7 @@ metadata:
   name: compute-resources-timebound
 spec:
   hard:
-    limits.cpu: "4"
-    limits.memory: 2.5Gi
+    limits.cpu: "6"
+    limits.memory: 3Gi
   scopes:
   - Terminating
