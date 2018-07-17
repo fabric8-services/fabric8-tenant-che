@@ -35,23 +35,22 @@ def release(project){
 def updatefabric8Tenant(releaseVersion){
   ws{
     container(name: 'clients') {
+
       def flow = new io.fabric8.Fabric8Commands()
-      sh 'chmod 600 /root/.ssh-git/ssh-key'
-      sh 'chmod 600 /root/.ssh-git/ssh-key.pub'
-      sh 'chmod 700 /root/.ssh-git'
-
-      git 'git@github.com:fabric8-services/fabric8-tenant.git'
-
-      sh "git config user.email fabric8cd@gmail.com"
-      sh "git config user.name fabric8-cd"
+      flow.setupGitSSH()
 
       def uid = UUID.randomUUID().toString()
-      sh "git checkout -b versionUpdate${uid}"
-
-      sh "echo ${releaseVersion} > CHE_VERSION"
+      def branch = "versionUpdate${uid}"
       def message = "Update fabric8-tenant-che version to ${releaseVersion}"
-      sh "git commit -a -m \"${message}\""
-      sh "git push origin versionUpdate${uid}"
+
+      sh """
+         git clone git@github.com:fabric8-services/fabric8-tenant.git --depth 1
+         cd fabric8-tenant
+         echo ${releaseVersion} > CHE_VERSION
+         git checkout -b ${branch}
+         git commit -a -m "${message}"
+         git push origin ${branch}
+         """
 
       def prId = flow.createPullRequest(message,'fabric8-services/fabric8-tenant',"versionUpdate${uid}")
       flow.mergePR('fabric8-services/fabric8-tenant',prId)
