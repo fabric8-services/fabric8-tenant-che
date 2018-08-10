@@ -9,7 +9,7 @@ releaseNode {
 
     if (utils.isCI()) {
 
-      def version = mavenCI{}
+      def version = mavenCI{ goal = "deploy" }
       // hard coded for now
       def mvnRepo = "https://nexus.cd.test.fabric8.io/content/repositories/staging"
       def message = "PR now available for testing: https://openshift.io/_profile/_tenant?cheVersion=${version}&mavenRepo=${mvnRepo}"
