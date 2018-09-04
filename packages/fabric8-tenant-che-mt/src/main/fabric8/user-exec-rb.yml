@@ -1,0 +1,9 @@
+metadata:
+  name: user-exec
+roleRef:
+  name: exec
+subjects:
+- kind: User
+  name: ${PROJECT_USER}
+userNames:
+- ${PROJECT_USER}
