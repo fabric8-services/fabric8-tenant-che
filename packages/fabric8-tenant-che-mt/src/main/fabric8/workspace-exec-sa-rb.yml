@@ -1,0 +1,8 @@
+metadata:
+  name: workspace-exec
+roleRef:
+  name: exec
+  namespace: ${PROJECT_NAMESPACE}-che
+subjects:
+- kind: ServiceAccount
+  name: che-workspace

@@ -1,0 +1,10 @@
+metadata:
+  name: exec
+rules:
+- apiGroups:
+  - ""
+  attributeRestrictions: null
+  resources:
+  - pods/exec
+  verbs:
+  - create
