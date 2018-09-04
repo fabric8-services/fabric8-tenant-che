@@ -1,0 +1,10 @@
+metadata:
+  name: user-exec
+roleRef:
+  name: exec
+  namespace: ${PROJECT_NAMESPACE}-che
+subjects:
+- kind: User
+  name: ${PROJECT_USER}
+userNames:
+- ${PROJECT_USER}

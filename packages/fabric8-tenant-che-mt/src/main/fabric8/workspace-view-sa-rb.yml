@@ -1,0 +1,7 @@
+metadata:
+  name: workspace-view
+roleRef:
+  name: view
+subjects:
+- kind: ServiceAccount
+  name: che-workspace
